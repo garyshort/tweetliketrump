@@ -1,0 +1,7 @@
+C:\Users\gashort\Documents\Presentations\MarkovTrumpCounterRadicalization\TweetLikeTrump\TweetLikeTrump\bin\Debug\TweetLikeTrump.exe.config
+C:\Users\gashort\Documents\Presentations\MarkovTrumpCounterRadicalization\TweetLikeTrump\TweetLikeTrump\bin\Debug\TrumpSpeeches.txt
+C:\Users\gashort\Documents\Presentations\MarkovTrumpCounterRadicalization\TweetLikeTrump\TweetLikeTrump\bin\Debug\TweetLikeTrump.exe
+C:\Users\gashort\Documents\Presentations\MarkovTrumpCounterRadicalization\TweetLikeTrump\TweetLikeTrump\bin\Debug\TweetLikeTrump.pdb
+C:\Users\gashort\Documents\Presentations\MarkovTrumpCounterRadicalization\TweetLikeTrump\TweetLikeTrump\obj\Debug\TweetLikeTrump.csprojResolveAssemblyReference.cache
+C:\Users\gashort\Documents\Presentations\MarkovTrumpCounterRadicalization\TweetLikeTrump\TweetLikeTrump\obj\Debug\TweetLikeTrump.exe
+C:\Users\gashort\Documents\Presentations\MarkovTrumpCounterRadicalization\TweetLikeTrump\TweetLikeTrump\obj\Debug\TweetLikeTrump.pdb

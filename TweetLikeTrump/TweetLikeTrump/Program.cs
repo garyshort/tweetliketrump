@@ -27,7 +27,7 @@ namespace TweetLikeTrump
         static void Main(string[] args)
         {
             Dictionary<string, List<string>> model = CreateModel();
-            while (true) { TweetLikeTrump(model); }
+            for (int i = 0; i < 5; i++) { TweetLikeTrump(model); }
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace TweetLikeTrump
                     // Get the last two words of the sentence
                     string[] words = tweet.Split();
                     string last2Words = String.Join(
-                        " ", 
+                        " ",
                         words.ToList().GetRange(words.Length - 2, 2).ToArray());
                     last2Words = new string(
                         last2Words
@@ -72,7 +72,8 @@ namespace TweetLikeTrump
                     // No, the model doesn't contain the key so continue from a random position
                     else { tweet += " " + RandomString(model); }
                 }
-                else {
+                else
+                {
                     tweet += " " + RandomString(model);
                 }
             }
@@ -80,7 +81,6 @@ namespace TweetLikeTrump
                     .ToCharArray()
                     .Where(c => !char.IsPunctuation(c)).ToArray());
             Console.WriteLine(tweet + "\n\n");
-            Thread.Sleep(10000); // Give us time to read the displayed text
         }
 
         /// <summary>
@@ -107,11 +107,13 @@ namespace TweetLikeTrump
         {
             Dictionary<string, List<string>> model = new Dictionary<string, List<string>>();
             string[] sentences = GetSentences();
-            foreach (string sentence in sentences) {
+            foreach (string sentence in sentences)
+            {
                 List<string> words = sentence.Split().ToList();
                 // Loop through the words creating a moving two word window as the key
                 // and the rest of the sentence as the value.
-                for (int i = 0; i < words.Count - 1; i++) {
+                for (int i = 0; i < words.Count - 1; i++)
+                {
                     string[] keyArray = words.GetRange(i, 2).ToArray();
                     string key = String.Join(" ", keyArray).ToUpper();
                     int offset = i + 2;
@@ -124,7 +126,8 @@ namespace TweetLikeTrump
                         values.Add(value);
                         model.Add(key, values);
                     }
-                    else {
+                    else
+                    {
                         model[key].Add(value);
                     }
                 }
@@ -138,8 +141,6 @@ namespace TweetLikeTrump
         /// <returns>An array of sentences</returns>
         private static string[] GetSentences()
         {
-            //string path = @"C:\Users\gashort\Documents\Presentations\MarkovTrumpCounterRadicalization\";
-            //string file = "TrumpSpeeches.txt";
             string corpus = File.ReadAllText("TrumpSpeeches.txt");
             return Regex.Split(corpus, @"(?<=[\.!\?])\s+");
         }
